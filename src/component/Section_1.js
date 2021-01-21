@@ -1,11 +1,31 @@
 import React, { Component } from 'react'
+import './Section_1.css';
 
-export default class Section_1 extends Component {
+class Section_1 extends Component {
+
+   state={
+       Entree:[
+
+            {nom: "Entre1", prix:"4"},
+            {nom: "Entre2", prix:"4"},
+            {nom: "Entre3", prix:"4"},
+            {nom: "Entre4", prix:"4"},
+            {nom: "Entre5", prix:"4"},
+            {nom: "Entre6", prix:"4"},
+
+       ]
+   }
+
     render() {
         return (
-            <div>
-                Ma section 1
+            <div className="Section_1">
+
+
+
+                
             </div>
         )
     }
 }
+
+export default Section_1;
