@@ -1,0 +1,45 @@
+header{
+    background-color: #FC4A1A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    position: fixed;
+    top: 0;
+    z-index: 15;
+   
+}
+.butStyle>img{
+    width: 25px;
+    margin: 0px 20px;
+}
+.butStyle{
+    background: none;
+    border: none;
+}
+header>input{
+    border: none;
+}
+.meet>p{
+    margin: 0;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+}
+.meet>p:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: 0;
+    outline-style: none;
+}
+
+.meet>a:hover{
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    outline-style: none;
+}
