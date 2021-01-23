@@ -1,0 +1,46 @@
+
+.Suivi{
+    display: flex;
+    justify-content: center;
+    right: 0;
+
+    background-color: #F7B733;
+    color: #F7B733;
+    width: 30%;
+    height: 200vh ;
+}
+.active{
+    background-color:#F7B733 ;
+    color:  #FC4A1A;
+}
+
+.SuiviFixed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+     position: sticky;
+    position: fixed;
+
+    margin-top: 45px;
+    height: 30rem;
+
+    border: solid 1px ;
+    border-radius: 5px;
+
+  
+
+    background-color: #FC4A1A;
+}
+
+.SuiviFixed>h1{
+
+    border-bottom: solid 1px #F7B733;
+    margin: 0px 5px 50px 5px ;
+}
+ .SuiviFixed>h3{
+
+    margin: 2rem;
+
+ }

@@ -1,6 +1,52 @@
-
 .Section_1{
-    background-color: aqua;
-    height:90vh;
+    background-color: #FC4A1A;
+    justify-content: space-around;
+
+}
+
+
+
+.brother{
+    background-color: #FC4A1A;
+    display: flex;
+   
     
 }
+
+.Card{
+
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+  
+
+   
+  
+}
+
+.CardBody{
+    background-color: #DFDCE3;
+}
+
+.Card_btn{
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Card_btn>Button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 5vh;
+    margin-left: 5px;
+    background-color: #4ABDAC;
+
+}
+
+
+
+
