@@ -1,18 +1,17 @@
 import './App.css';
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css"
+import Header from './component/Header';
+import Carousel1 from './component/Carousel';
+import Formulaire from './component/Formulaire';
+class App extends Component {
 
-
-class App extends Component{
-	
-	stat={
-  }
-  
-	render(){
-		return(
+	render() {
+		return (
 			<div className="App" >
-
-			<Button variant="success">Success</Button>{' '}
+				<Header />
+				<Carousel1 />
+				<Formulaire />
 
 			</div>
 		)

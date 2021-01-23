@@ -1,0 +1,22 @@
+.imgCarousel{
+ width: 100%;
+ height: 850px;
+ margin-left: auto;
+ margin-right: auto;
+ filter: brightness(45%);
+}
+.textPres{
+    bottom: 250px;
+    background-color: #fc4b1ada;;
+}
+.carousel-indicators>li{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.carousel-caption{
+    z-index: 0;
+}
+.carousel-indicators{
+    z-index: 1;
+}
