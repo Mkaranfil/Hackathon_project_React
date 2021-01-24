@@ -10,8 +10,9 @@
 .panierOff{
     transition: 0.5s;
     opacity: 0;
-    visibility:hidden;
-}  
+    visibility: hidden;
+    
+}
 .paiement{
 
     font-weight: 700;

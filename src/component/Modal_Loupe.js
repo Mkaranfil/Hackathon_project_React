@@ -5,8 +5,9 @@ import "./Modal_Loupe.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => {
+const Header = (props) => {
 
+    console.log(props);
 
         const [show, setShow] = useState(false);
     
@@ -27,16 +28,35 @@ const Header = () => {
             </Button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Header className="modalHeader" >
+                    <Modal.Title>{props.dataEntre.Entree[0].nom} : </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+
+                <div className="body d-flex">
+                    <div className="image">
+                    <img src="./img/entre/entre(0).jpg" alt="" style={ {height: `50vh`,width: `50vh` }}/>
+                    </div>
+
+                    <div className="texte">
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Dicta, officiis eveniet magnam ipsa ullam dignissimos.
+                        </p>
+                        <span>
+                            {props.dataEntre.Entree[0].prix} $
+                        </span>
+
+
+                    </div>
+                </div>
+
+
+                <Modal.Footer className="modalFooter">
+                    <Button className="btnModal"  onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
+                    <Button className="btnModal"  onClick={handleClose}>
+                        Panier
                      </Button>
                 </Modal.Footer>
             </Modal>
@@ -50,4 +70,4 @@ const Header = () => {
 
 
 
-export default Header; 
+export default Header;  

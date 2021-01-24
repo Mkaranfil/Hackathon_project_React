@@ -1,7 +1,6 @@
 
 
 
-
 .first{
     display: flex !important;
     justify-content: center;
@@ -11,4 +10,41 @@
     width: 5vh;
     border-radius: 5px;
     background-color: #4ABDAC !important;
+}
+
+.modalHeader{
+    background-color:  #F7B733 ;
+    color:  #FC4A1A;
+}
+
+.image{
+    border: 1px #F7B733 solid ;
+    margin: 10px;
+   
+}
+
+.body{
+    background-color: #FC4A1A;
+}
+.texte{
+
+    background-color: #FC4A1A;
+    color: #F7B733;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0px 5px 0px 5px;
+    
+
+}
+
+.modalFooter{
+    background-color:  #F7B733 ;
+}
+
+.btnModal{
+    
+    background-color:  #4ABDAC;
 }
