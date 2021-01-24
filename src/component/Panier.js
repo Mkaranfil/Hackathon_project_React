@@ -5,6 +5,9 @@ export default class Panier extends Component {
         document.querySelector('#panier').classList.toggle("panierOff");
         document.querySelector('.close').style.pointerEvents = 'none';
     }
+    buy = ()=> {
+        document.querySelector('#formsPanel').classList.toggle("formsOff");
+    }
     render() {
         return (
             <div id="panier" className="panierOff ">
@@ -13,7 +16,7 @@ export default class Panier extends Component {
                     <button onClick={this.closed} className="close m-4">❌</button>
                 </div>
                 <div>
-                    <button className="paiement">Paiement</button>
+                    <button onClick={this.buy} className="paiement">Paiement</button>
                 </div>
 
             </div>

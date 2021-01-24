@@ -1,4 +1,27 @@
 .forms{
     background-color: rgb(255, 94, 0);
-    width: 600px;
+    width: 1050px;
+    position: fixed;
+    bottom:10vh;
+    right: 35vh;
+    font-weight: 700; 
+    z-index: 20;
 }
+.formsOff{
+    transition: 0.5s;
+    opacity: 0;
+    visibility:hidden;
+}  
+.caseForms{
+    margin-right: 17px;
+}
+.closedForm{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+.formsOff{
+    transition: 0.5s;
+    opacity: 0;
+    visibility:hidden;
+} 

@@ -7,6 +7,7 @@ export default class Header extends Component {
     panier=()=>{
         document.querySelector('#panier').classList.toggle("panierOff");
         document.querySelector('.close').style.pointerEvents = 'auto';
+        
     }
     render() {
         return (

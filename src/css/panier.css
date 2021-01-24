@@ -5,13 +5,13 @@
     position: sticky;
     position: fixed;
     bottom: 15vh;
-    z-index: 7;
     transition: 0.5s;
 }
 .panierOff{
     transition: 0.5s;
     opacity: 0;
-}
+    visibility:hidden;
+}  
 .paiement{
 
     font-weight: 700;
