@@ -5,7 +5,6 @@
     position: sticky;
     position: fixed;
     bottom: 15vh;
-    z-index: 7;
     transition: 0.5s;
 }
 .panierOff{
