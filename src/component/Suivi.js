@@ -11,8 +11,6 @@ class Suivi extends Component {
 
                 <div className="SuiviFixed">
 
-
-
                     <h1>Compose ton MENU</h1>
 
                     <h3 className='menuEntree'>1. ENTREE</h3>

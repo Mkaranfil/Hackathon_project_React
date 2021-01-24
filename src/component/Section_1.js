@@ -1,4 +1,4 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 import './Section_1.css';
 import Suivi from "./Suivi";
 import Modal from "./Modal_Loupe";
@@ -27,29 +27,29 @@ class Section_1 extends Component {
     }
 
 
-    active = () =>{
+    active = () => {
 
         let Entree = document.querySelector(`.menuEntree`);
         // let Plat = document.querySelector(`.menuPlat`);
         // let Dessert = document.querySelector(`.menuDessert`);
-        
+
 
         Entree.classList.add('active');
 
     }
-    
+
 
     render() {
 
-        
+
 
         return (
 
-            <div className="Section_1 d-flex" onMouseOver={this.active} >
+            <div className="Section_1 d-flex " onMouseOver={this.active} >
 
                 <div className="d-flex flex-column">
 
-                    <h1 style={{color:" #F7B733" , borderBottom:'1px solid  #F7B733'}}>Nos entrees:</h1>
+                    <h1 style={{ color: " #F7B733", borderBottom: '1px solid  #F7B733' }}>Nos entrees:</h1>
 
 
                     <div className="brother row-12">
@@ -58,17 +58,16 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(1).jpg" />
+                                <Card.Img variant="top" src="./img/entre/entre(0).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[0].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[0].prix} $</Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
-                        </Card.Text>
+                                    </Card.Text>
                                     <div className="Card_btn">
-                                        <Button> <Modal /></Button>
-                                        
+                                        <Modal dataEntre={this.state} /> 
                                         <Button  ><FontAwesomeIcon icon={faCartPlus} /></Button>
                                     </div>
                                 </Card.Body>
@@ -77,27 +76,28 @@ class Section_1 extends Component {
                         </div>
                         <div className="col-4 Card">
 
-                            <Card className="" style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(2).jpg" />
+                            <Card style={{ width: '15rem', height: '29rem' }}>
+                                <Card.Img variant="top" src="./img/entre/entre(1).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[1].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[1].prix} $</Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
-                        </Card.Text>
+                                    </Card.Text>
                                     <div className="Card_btn">
-                                        <Button><FontAwesomeIcon icon={faSearch} /></Button>
-                                        <Button ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Button> </Button>
+                                        <Button  ><FontAwesomeIcon icon={faCartPlus} /></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
+
 
                         </div>
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(3).jpg" />
+                                <Card.Img variant="top" src="./img/entre/entre(2).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[2].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[2].prix} $</Card.Title>
@@ -120,8 +120,8 @@ class Section_1 extends Component {
 
                         <div className="col-4 Card">
 
-                            <Card style={{ width: '15rem', height: '28rem' }} >
-                                <Card.Img variant="top" src="./img/entre/entre(4).jpg" />
+                            <Card style={{ width: '15rem', height: '29rem' }} >
+                                <Card.Img variant="top" src="./img/entre/entre(3).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[3].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[3].prix} $</Card.Title>
@@ -140,7 +140,7 @@ class Section_1 extends Component {
                         <div className="col-4  Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(5).jpg" />
+                                <Card.Img variant="top" src="./img/entre/entre(4).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[4].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[4].prix} $</Card.Title>
@@ -159,7 +159,7 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }} >
-                                <Card.Img variant="top" src="./img/entre/entre(6).jpg" style={{ height: `10rem` }} />
+                                <Card.Img variant="top" src="./img/entre/entre(5).jpg" style={{ height: `10rem` }} />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[5].nom}</Card.Title>
                                     <Card.Title>{this.state.Entree[5].prix} $</Card.Title>
