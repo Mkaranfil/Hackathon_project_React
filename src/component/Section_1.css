@@ -48,6 +48,9 @@
     background-color: #4ABDAC;
     background-image:url(../ico/shopping-cart-solid.svg);
     background-size: cover;
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
     
     
 

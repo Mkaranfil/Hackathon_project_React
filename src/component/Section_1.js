@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Section_1.css'
 import Modal from "./Modal_Loupe";
-import panier from'../ico/shopping-cart-solid.svg'
 // bootstrap
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';

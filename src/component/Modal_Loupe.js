@@ -24,7 +24,7 @@ const Header = (props) => {
 
 
             <Button className="first" onClick={handleShow}>
-                <FontAwesomeIcon icon={faSearch} />
+                <FontAwesomeIcon icon={faSearch} style={{color: '#F7B733'}} />
             </Button>
 
             <Modal show={show} onHide={handleClose}>
