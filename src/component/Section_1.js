@@ -1,44 +1,56 @@
 import React, { Component } from 'react'
-import './Section_1.css';
-import Suivi from "./Suivi";
+import './Section_1.css'
 import Modal from "./Modal_Loupe";
+import panier from'../ico/shopping-cart-solid.svg'
 // bootstrap
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-// import { Modal } from 'react-bootstrap';
+import Panier from './Panier.js'
 
-// fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-
-let cards = document.getElementsByClassName("Card.Title");
-
+var monPanier = 0;
 class Section_1 extends Component {
     
     state = {
         Entree: [
 
-            { id: 1, nom: "Entre1", prix: "4" },
-            { id: 2, nom: "Entre2", prix: "4.5" },
-            { id: 3, nom: "Entre3", prix: "6" },
-            { id: 4, nom: "Entre4", prix: "4" },
-            { id: 5, nom: "Entre5", prix: "8" },
-            { id: 6, nom: "Entre6", prix: "4" },
+            { id: 1, nom: "Entre1", prix: "4", image: "./img/entre/entre(0).jpg"},
+            { id: 2, nom: "Entre2", prix: "4.5", image: "./img/entre/entre(1).jpg"},
+            { id: 3, nom: "Entre3", prix: "6", image: "./img/entre/entre(2).jpg" },
+            { id: 4, nom: "Entre4", prix: "4", image: "./img/entre/entre(3).jpg" },
+            { id: 5, nom: "Entre5", prix: "8", image: "./img/entre/entre(4).jpg" },
+            { id: 6, nom: "Entre6", prix: "4", image: "./img/entre/entre(5).jpg" },
 
-        ]
+        ],
+
+        monPanNom:[],monPanPrix:[]
+
+    };
+
+
+    ajout = (e) =>{
+
+        let cible = e.target;
+
+        const Nom = (cible.parentElement.parentElement.firstChild);
+        console.log(Nom.innerHTML);
+
+        const Prix = (cible.parentElement.parentElement.childNodes[1]);
+        console.log(Prix.innerHTML);
+
+        monPanier = monPanier + Number(Prix.innerHTML);
+        console.log(monPanier);
+
+        this.state.monPanNom.push(Nom.innerHTML);
+        console.log(this.state.monPanNom);
+
+        this.state.monPanPrix.push(Prix.innerHTML);
+        console.log(this.state.monPanPrix);
+       
     }
 
-    active = () => {
-        
 
-    }
 
-    addPanier = () =>{
-    
 
-        
-    }
 
     render() {
 
@@ -58,18 +70,18 @@ class Section_1 extends Component {
 
                         <div className="col-4 Card">
 
-                            <Card style={{ width: '15rem', height: '29rem' }} >
-                                <Card.Img variant="top" src="./img/entre/entre(0).jpg" />
+                            <Card style={{ width: '15rem', height: '29rem' }}>
+                                <Card.Img variant="top" src={this.state.Entree[0].image} />
                                 <Card.Body className="CardBody">
-                                    <Card.Title>{this.state.Entree[0].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[0].prix} $</Card.Title>
+                                    <Card.Title className="cardNom">{this.state.Entree[0].nom}</Card.Title>
+                                    <Card.Title className="cardPrix">{this.state.Entree[0].prix}  </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                                     </Card.Text>
                                     <div className="Card_btn">
-                                        <Modal dataEntre={this.state} /> 
-                                        <Button onClick={this.addPanier} ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[0]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -78,17 +90,17 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(1).jpg" />
+                                <Card.Img variant="top" src={this.state.Entree[1].image} />
                                 <Card.Body className="CardBody">
-                                    <Card.Title>{this.state.Entree[1].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[1].prix} $</Card.Title>
+                                    <Card.Title >{this.state.Entree[1].nom}</Card.Title>
+                                    <Card.Title>{this.state.Entree[1].prix} </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                                     </Card.Text>
                                     <div className="Card_btn">
-                                        <Button> </Button>
-                                        <Button  ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[1]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -98,17 +110,17 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(2).jpg" />
+                                <Card.Img variant="top" src={this.state.Entree[2].image} />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[2].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[2].prix} $</Card.Title>
+                                    <Card.Title>{this.state.Entree[2].prix} </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                         </Card.Text>
                                     <div className="Card_btn">
-                                        <Button><FontAwesomeIcon icon={faSearch} /></Button>
-                                        <Button ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[2]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -122,17 +134,17 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }} >
-                                <Card.Img variant="top" src="./img/entre/entre(3).jpg" />
+                                <Card.Img variant="top" src={this.state.Entree[3].image} />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[3].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[3].prix} $</Card.Title>
+                                    <Card.Title>{this.state.Entree[3].prix} </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                         </Card.Text>
                                     <div className="Card_btn">
-                                        <Button><FontAwesomeIcon icon={faSearch} /></Button>
-                                        <Button ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[3]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -141,17 +153,17 @@ class Section_1 extends Component {
                         <div className="col-4  Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }}>
-                                <Card.Img variant="top" src="./img/entre/entre(4).jpg" />
+                                <Card.Img variant="top" src={this.state.Entree[4].image} />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[4].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[4].prix} $</Card.Title>
+                                    <Card.Title>{this.state.Entree[4].prix} </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                         </Card.Text>
                                     <div className="Card_btn">
-                                        <Button><FontAwesomeIcon icon={faSearch} /></Button>
-                                        <Button ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[4]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -160,17 +172,17 @@ class Section_1 extends Component {
                         <div className="col-4 Card">
 
                             <Card style={{ width: '15rem', height: '29rem' }} >
-                                <Card.Img variant="top" src="./img/entre/entre(5).jpg" style={{ height: `10rem` }} />
+                                <Card.Img variant="top" src={this.state.Entree[5].image} style={{ height: `10rem` }} />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[5].nom}</Card.Title>
-                                    <Card.Title>{this.state.Entree[5].prix} $</Card.Title>
+                                    <Card.Title>{this.state.Entree[5].prix} </Card.Title>
                                     <Card.Text>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nulla, eaque nihil enim a eveniet dignissimos quisquam eum assumenda recusandae at!
                         </Card.Text>
                                     <div className="Card_btn">
-                                        <Button><FontAwesomeIcon icon={faSearch} /></Button>
-                                        <Button ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Modal dataEntre={this.state.Entree[5]} /> 
+                                        <Button onClick={this.ajout}></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -181,9 +193,7 @@ class Section_1 extends Component {
 
                 </div>
 
-                <Suivi />
-
-
+            
             </div>
         )
     }

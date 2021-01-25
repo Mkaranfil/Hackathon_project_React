@@ -38,6 +38,7 @@
 }
 
 .Card_btn>Button{
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,15 @@
     width: 5vh;
     margin-left: 5px;
     background-color: #4ABDAC;
+    background-image:url(../ico/shopping-cart-solid.svg);
+    background-size: cover;
+    
+    
 
 }
+
+
+
+
 
 
