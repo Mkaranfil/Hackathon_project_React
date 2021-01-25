@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import { Form, FormGroup } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import '../css/formulaire.css'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faWindowClose} from '@fortawesome/free-solid-svg-icons';
+import { Button } from 'react-bootstrap';
 export default class Formulaire extends Component {
 
     closeForm = () => {
-        // document.querySelector('#panier').classList.toggle("panierOff");
-        // document.querySelector('.close').style.pointerEvents = 'none';
         console.log("close");
         document.querySelector('#formsPanel').classList.toggle("formsOff");
     }
@@ -16,10 +14,10 @@ export default class Formulaire extends Component {
     render() {
         return (
             <div className="p-5 forms d-flex formsOff" id="formsPanel">
-                <div>
-                <button onClick={this.closeForm} className="closedForm">❌</button>
+                <div className="iclose">
+                <button onClick={this.closeForm} className="closedForm"><FontAwesomeIcon icon={faWindowClose} /></button>
                 </div>
-                <div className='mr-5'>
+                <div className='mr-5 divA'>
                     <Form>
                         <div className="my-5">
                         <h1>Connexion</h1>
@@ -83,7 +81,6 @@ export default class Formulaire extends Component {
                         </Form.Row>
                         <Form.Row>
 
-
                             <Form.Group controlId="formGridState">
                                 <Form.Label>Choix du paiement</Form.Label>
                                 <Form.Control as="select" defaultValue="Choose...">
@@ -93,6 +90,8 @@ export default class Formulaire extends Component {
                                     <option>Visa/Master Card</option>
                                     <option>Carte bancaire</option>
                                 </Form.Control>
+
+                            <Button as="input" type="submit" value="Envoyer" className="my-3" />
                             </Form.Group>
                         </Form.Row>
                     </Form>

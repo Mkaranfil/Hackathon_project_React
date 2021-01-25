@@ -1,8 +1,8 @@
 .forms{
-    background-color: rgb(255, 94, 0);
+    background-color: rgb(255, 240, 232);
     width: 1050px;
     position: fixed;
-    bottom:10vh;
+    bottom:1vw;
     right: 35vh;
     font-weight: 700; 
     z-index: 20;
@@ -25,3 +25,12 @@
     opacity: 0;
     visibility:hidden;
 } 
+.divA{
+    border-right: rgb(122, 97, 84) solid 3px;
+}
+.closedForm{
+    color:rgba(10, 10, 10, 0.575);
+}
+.closedForm:hover{
+    color: black;
+}

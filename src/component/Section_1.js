@@ -6,13 +6,16 @@ import Modal from "./Modal_Loupe";
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 // import { Modal } from 'react-bootstrap';
+
 // fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
-class Section_1 extends Component {
+let cards = document.getElementsByClassName("Card.Title");
 
+class Section_1 extends Component {
+    
     state = {
         Entree: [
 
@@ -26,18 +29,16 @@ class Section_1 extends Component {
         ]
     }
 
-
     active = () => {
-
-        let Entree = document.querySelector(`.menuEntree`);
-        // let Plat = document.querySelector(`.menuPlat`);
-        // let Dessert = document.querySelector(`.menuDessert`);
-
-
-        Entree.classList.add('active');
+        
 
     }
 
+    addPanier = () =>{
+    
+
+        
+    }
 
     render() {
 
@@ -57,7 +58,7 @@ class Section_1 extends Component {
 
                         <div className="col-4 Card">
 
-                            <Card style={{ width: '15rem', height: '29rem' }}>
+                            <Card style={{ width: '15rem', height: '29rem' }} >
                                 <Card.Img variant="top" src="./img/entre/entre(0).jpg" />
                                 <Card.Body className="CardBody">
                                     <Card.Title>{this.state.Entree[0].nom}</Card.Title>
@@ -68,7 +69,7 @@ class Section_1 extends Component {
                                     </Card.Text>
                                     <div className="Card_btn">
                                         <Modal dataEntre={this.state} /> 
-                                        <Button  ><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                        <Button onClick={this.addPanier} ><FontAwesomeIcon icon={faCartPlus} /></Button>
                                     </div>
                                 </Card.Body>
                             </Card>
