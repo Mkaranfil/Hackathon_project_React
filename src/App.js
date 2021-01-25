@@ -5,6 +5,7 @@ import Header from './component/Header';
 import Carousel1 from './component/Carousel';
 import Formulaire from './component/Formulaire';
 import  Section_1  from  "./component/Section_1";
+import Suivi from "./component/Suivi";
 
 
 class App extends Component {
@@ -14,7 +15,12 @@ class App extends Component {
 			<div className="App" >
 				<Header />
 				<Carousel1 />
-				<Section_1 />
+				<div className="sec1 d-flex">
+
+					<Section_1 />
+					<Suivi  />
+
+				</div>
 				<Formulaire />
 			</div>
 		)

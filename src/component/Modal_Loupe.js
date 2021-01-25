@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Header = (props) => {
 
-    console.log(props);
+   
 
         const [show, setShow] = useState(false);
     
@@ -29,12 +29,12 @@ const Header = (props) => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header className="modalHeader" >
-                    <Modal.Title>{props.dataEntre.Entree[0].nom} : </Modal.Title>
+                    <Modal.Title> {props.dataEntre.nom}: </Modal.Title>
                 </Modal.Header>
 
                 <div className="body d-flex">
                     <div className="image">
-                    <img src="./img/entre/entre(0).jpg" alt="" style={ {height: `50vh`,width: `50vh` }}/>
+                    <img src={props.dataEntre.image} alt="" style={ {height: `25vh`,width: `25vh` }}/>
                     </div>
 
                     <div className="texte">
@@ -43,7 +43,7 @@ const Header = (props) => {
                             Dicta, officiis eveniet magnam ipsa ullam dignissimos.
                         </p>
                         <span>
-                            {props.dataEntre.Entree[0].prix} $
+                            prix: {props.dataEntre.prix} $
                         </span>
 
 
