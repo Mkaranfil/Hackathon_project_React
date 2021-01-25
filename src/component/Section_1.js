@@ -4,16 +4,11 @@ import Modal from "./Modal_Loupe";
 // bootstrap
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-// import { Modal } from 'react-bootstrap';
-// fontawesome
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faSearch } from '@fortawesome/free-solid-svg-icons'
-// import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import Panier from './Panier.js'
 
 var monPanier = 0;
-
 class Section_1 extends Component {
-
+    
     state = {
         Entree: [
 
@@ -24,22 +19,12 @@ class Section_1 extends Component {
             { id: 5, nom: "Entre5", prix: "8", image: "./img/entre/entre(4).jpg" },
             { id: 6, nom: "Entre6", prix: "4", image: "./img/entre/entre(5).jpg" },
 
-        ]
+        ],
+
+        monPanNom:[],monPanPrix:[]
+
     };
 
-    
-
-
-    // active = () => {
-
-    //     let Entree = document.querySelector(`.menuEntree`);
-    //     // let Plat = document.querySelector(`.menuPlat`);
-    //     // let Dessert = document.querySelector(`.menuDessert`);
-
-
-    //     Entree.classList.add('active');
-
-    // };
 
     ajout = (e) =>{
 
@@ -52,8 +37,13 @@ class Section_1 extends Component {
         console.log(Prix.innerHTML);
 
         monPanier = monPanier + Number(Prix.innerHTML);
-
         console.log(monPanier);
+
+        this.state.monPanNom.push(Nom.innerHTML);
+        console.log(this.state.monPanNom);
+
+        this.state.monPanPrix.push(Prix.innerHTML);
+        console.log(this.state.monPanPrix);
        
     }
 
@@ -202,9 +192,7 @@ class Section_1 extends Component {
 
                 </div>
 
-               
-
-
+            
             </div>
         )
     }
